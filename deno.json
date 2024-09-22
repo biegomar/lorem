@@ -2,5 +2,5 @@
   "name": "@biegomar/lorem",
   "imports": { "@std/assert": "jsr:@std/assert@1" },
   "exports": "./lorem.ts",
-  "version": "0.1.0"
+  "version": "0.1.1"
 }
