@@ -1,10 +1,20 @@
 /**
  * A library to generate an arbitrary sequence of “lorem ipsum” texts.
  *
+ * ```ts
+ * import generateWords, * as mod from "@biegomar/lorem";
+ *
+ * if (import.meta.main) {
+ *  console.log("Example text:", generateWords(10)); // Example text: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+ *  // -- OR -- 
+ *  console.log("Example text:", mod.default(2)); // Example text: Lorem ipsum
+ * }
+ * ```
  * @module
  */
 
-const loremParagraph1 = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
+const loremParagraph1 =
+    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.";
 const wordsParagraph1 = loremParagraph1.split(" ");
 
 /**
@@ -14,7 +24,7 @@ const wordsParagraph1 = loremParagraph1.split(" ");
  * @returns A string with the number of words from "lorem ipsum".
  */
 export default function generateWords(countOfWords: number): string {
-    let result: string = "";    
+    let result: string = "";
     let wordCounter: number = 0;
 
     for (let index = 0; index < countOfWords; index++) {
@@ -26,8 +36,7 @@ export default function generateWords(countOfWords: number): string {
         if (index < countOfWords - 1) {
             result += " ";
         }
-        
     }
 
     return result;
-  }
+}
